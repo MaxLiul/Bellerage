@@ -1,0 +1,66 @@
+body{
+    background: #f8f8f8;
+}
+.header{
+    background:#f8f8f8;
+}
+.footer{
+    background:#f8f8f8;
+}
+.email:active{
+    colour:blue;
+    background-color: #484343;
+}
+.menu{
+    color: blue;
+    font-style: italic;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+.menu:hover{
+    color:red; 
+}
+
+.description{
+    color:black;
+    font-style: bold;
+    font-size: 18px;
+    background:  #eaeaea;
+}
+.shortDescription{
+    color: #707070;;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+.detailedDescription{
+    color:  #484343;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.characteristics{
+    font-size: 16px;
+}
+
+.detailedCharacteristics{
+    font-style: italic;
+    list-style-type: square;
+
+    
+}
+
+.user{
+    color: blue;
+    border-width: 2px;
+    width: 300px;
+    font-size: 15px;
+}
+.message{
+    width: 300px;
+    height: 150px;
+    resize: none; 
+}
+
