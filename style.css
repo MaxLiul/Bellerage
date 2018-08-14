@@ -28,11 +28,23 @@ body{
 .product a img{
     border: 2px solid red;
 }
+.product{
+    float: left;
+}
 .footer{
     background:aquamarine;
     border-top: 2px solid black;
     clear: both;
+    width: 1880px;
+    height: 100px;
+    text-align: right;
+  }
+ .footer p{
+    margin-right: 50px;
+    margin-top: 50px;
 }
+
+
 .email:active{
     color:red;
     background-color: aquamarine;
@@ -44,15 +56,23 @@ body{
     color: blue;
     font-style: italic;
     font-size: 30px;
-    list-style-type: none;
     text-align: bottom; 
     margin: 20px;
 }
-
+/*
+.menu div{
+    text-align: bottom; 
+    margin: 20px;
+    display: flex;
+    margin: 0 auto;
+}*/
 .menu:hover{
     color:red; 
 }
-
+.characteristicBlocks{
+    display:flex;
+    flex-direction: column;
+}
 .description{
     color:black;
     font-style: bold;
