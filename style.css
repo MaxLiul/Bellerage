@@ -10,7 +10,6 @@ body{
     justify-content: center;
     margin: 0 auto;
 }
-
 .img{
     display: flex;
     margin: 0 auto;
@@ -19,59 +18,23 @@ body{
 .catalog{
     display: flex;
     margin: 0 auto;
-     
-   
 }
 .container{
     text-align: center;
 }
-.product a img{
-    border: 2px solid red;
+.mainBlock{
+    display: flex;
 }
 .product{
-    float: left;
-}
-.footer{
-    background:aquamarine;
-    border-top: 2px solid black;
-    clear: both;
-    width: 1880px;
-    height: 100px;
-    text-align: right;
-  }
- .footer p{
-    margin-right: 50px;
-    margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 510px;
 }
 
-
-.email:active{
-    color:red;
-    background-color: aquamarine;
-}
-.user{
-    text-transform: capitalize;
-}  
-.menu{
-    color: blue;
-    font-style: italic;
-    font-size: 30px;
-    text-align: bottom; 
-    margin: 20px;
-}
-/*
-.menu div{
-    text-align: bottom; 
-    margin: 20px;
-    display: flex;
-    margin: 0 auto;
-}*/
-.menu:hover{
-    color:red; 
-}
 .characteristicBlocks{
     display:flex;
-    flex-direction: column;
+    clear:both;
+    
 }
 .description{
     color:black;
@@ -91,30 +54,29 @@ body{
     font-weight: 400;
     line-height: 24px;
 }
-
 .characteristics{
     font-size: 16px;
 }
-
 .detailedCharacteristics{
     font-style: italic;
     list-style-type: square;
-
-    
 }
-
 .user{
     color: blue;
     border-width: 2px;
     width: 300px;
     font-size: 15px;
+    text-transform: capitalize;
+}
+.email:active{
+    color:red;
+    background-color: aquamarine;
 }
 .message{
     width: 300px;
     height: 150px;
     resize: none; 
 }
-
 .tables {
     border: 2px solid #000;
     width: 400px;
@@ -123,9 +85,29 @@ body{
     
   }
   td{
-    
     border: 2px solid #000;
     vertical-align: middle;
     text-align: center;
-    
   }
+  .menu{
+    color: blue;
+    font-style: italic;
+    font-size: 30px;
+    text-align: bottom; 
+    margin: 20px;
+}
+.menu:hover{
+    color:red; 
+}
+  .footer{
+    background:aquamarine;
+    border-top: 2px solid black;
+    clear: both;
+    width: 1880px;
+    height: 100px;
+    text-align: right;
+  }
+ .footer p{
+    margin-right: 50px;
+    margin-top: 50px;
+}
