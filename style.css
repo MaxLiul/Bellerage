@@ -61,6 +61,15 @@ body{
     font-style: italic;
     list-style-type: square;
 }
+.click{
+    width: 60px;
+    height: 30px;
+    background-color: #808080;
+}
+.click:hover{
+    background-color:blue;
+    color:red;
+}
 .user{
     color: blue;
     border-width: 2px;
