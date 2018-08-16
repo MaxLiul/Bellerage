@@ -1,0 +1,132 @@
+@import url(styleHeaderAbout.css);
+
+.footer{
+  width: 1280px;
+  height: 509px;
+  background-color: #445162;
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.contactsHeader{
+  font-family: Arial;
+  color:  #ffffff;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: center;
+  margin-top:50px;
+  margin-bottom:36px;
+}
+
+.mainBlock{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+ 
+   margin-left:229px;
+  margin-bottom:50px;
+  margin-right: 240px; 
+}
+.userInfotmation{
+  width: 500px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.userName{
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  background-color:  #ffffff;
+  padding-top:10px;
+  margin-bottom: 20px;
+}
+.userName span{
+  font-family: Arial;
+  color:  #445162;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 10px;
+  
+}
+.userMessage{
+  width: 500px;
+  height: 170px;
+  border-radius: 5px;
+  background-color:  #ffffff;
+  padding-top:10px;
+  margin-bottom: 20px;
+}
+.userMessage span{
+  font-family: Arial;
+  color:  #445162;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  margin-left: 10px;
+}
+.userButton{
+  border-radius: 5px;
+  background-color:  #ffffff;
+  width: 140px;
+  height: 40px;
+  margin-left: 180px;
+  outline: none;
+  font-family: Arial;
+  color:  #445161;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.companyInformation{
+  width: 240px;
+  display:flex;
+  flex-direction:column;
+}
+
+.icons{
+  display:flex;
+  flex-direction: row;
+  padding-bottom:15px;
+  
+}
+.icons h1{
+  font-family: Arial;
+  color:  #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  padding-left:10px;
+}
+.contactInformation{
+  display:flex;
+  flex-direction: row;
+  
+}
+.iconCircle{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display:flex;
+  margin:5px;
+  
+}
+.iconCircle h3{
+  color:  #445161;
+  display:flex;
+  justify-content: space-between; 
+  align-items: flex-end;
+  margin-left:5px;
+  margin-bottom:10px;
+  
+ }
