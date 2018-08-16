@@ -1,0 +1,104 @@
+@import url(styleHeaderAbout.css);
+
+.dignity{
+  width: 1280px;
+  height: 420px;
+  background-color: #f5f5f5;;
+  display:flex;
+  /*justify-content: space-between;*/
+  flex-direction: column;
+  
+}
+.pluses{
+  /* width: 1280px;
+  height: 30px; */
+  text-align: center;
+  margin-top:50px;
+  margin-bottom:29px;
+  /* justify-content: center; */
+  /* clear:both; */
+
+}
+.mainMessage{
+  /* width: 1280px;
+  height: 280px; */
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:0 50px;
+  
+}
+ h3{
+  font-family: Arial;
+  color:  #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  justify-content: center;
+} 
+.message{
+  width: 50%;
+  display:flex;
+  flex-direction:row;
+  margin-bottom:20px;
+  /* margin-left: 50px;
+  margin-right: 10px; */
+  
+}
+ /* .message:nth-child(2n) {
+  margin-left:0;
+}  */
+
+.message span{
+  font-family: Arial;
+  color:  #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+}
+.subplases{
+  margin:10px;
+}
+
+
+
+
+
+
+
+
+/* .mainMessage ul{
+  width: 500px;
+  height: 300px;
+  margin-left:95px;
+  margin-top:-15px;
+  margin-right:50px;
+  
+}
+.mainMessage li{
+  width: 550px;
+  font-family: Arial;
+  color:  #333333;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  list-style-image: url(img/plus_icon.png);
+  margin-bottom: 25px;
+  margin-top:-10px;
+  margin-right: 50px;
+} 
+.mainMessage li span{
+  position: relative;
+  top: -20px;
+} */
+.scrinshots{
+  width: 1280px;
+  height: 496px;
+  background-color: #ffffff;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+}

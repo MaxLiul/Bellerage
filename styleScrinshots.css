@@ -1,0 +1,54 @@
+@import url(styleHeaderAbout.css);
+
+
+.scrinshots{
+  width: 1280px;
+  height: 496px;
+  background-color:  #ffffff;
+  display:flex;
+  /*justify-content: space-between;*/
+  flex-direction: column;
+}
+.scrinHeader{
+  font-family: Arial;
+  color:  #445161;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-top:50px;
+  margin-bottom:35px;
+  text-align: center;
+}
+.mainDescription{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:0 50px; 
+}
+.description{
+  width: 50%;
+  display:flex;
+  flex-direction:row;
+  margin-bottom:20px;
+}
+.descriptionMessage{
+  margin:10px;
+}
+.descriptionHeader{
+  font-family: Arial;
+  color:  #445161;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+     
+}
+.descriptionMessage span{
+  font-family: Arial;
+  color:  #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;  
+  }
