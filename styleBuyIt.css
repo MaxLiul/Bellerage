@@ -33,7 +33,10 @@
   background-color:#425062; 
   display:flex;
   flex-direction: column;
-  border:3px solid;
+  border:3px solid transparent;
+}
+.bannerStandart:hover{
+  border: 3px solid rgb(200, 255, 0);
 }
 .bannerPremium{
   width: 300px;

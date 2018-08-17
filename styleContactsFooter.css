@@ -49,6 +49,7 @@
   line-height: 24px;
   text-align: left;
   padding:5px;
+  outline:none;
   
   
 }
@@ -90,7 +91,6 @@
   border-color: rgb(200, 255, 0);
 }
 .companyInformation{
-  width: 240px;
   display:flex;
   flex-direction:column;
 }
