@@ -24,8 +24,7 @@
   display:flex;
   flex-direction: row;
   justify-content: space-between;
- 
-   margin-left:229px;
+  margin-left:229px;
   margin-bottom:50px;
   margin-right: 240px; 
 }
@@ -43,15 +42,13 @@
   background-color:  #ffffff;
   padding-top:10px;
   margin-bottom: 20px;
-}
-.userName span{
   font-family: Arial;
   color:  #445162;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  margin-left: 10px;
+  
   
 }
 .userMessage{
@@ -61,15 +58,14 @@
   background-color:  #ffffff;
   padding-top:10px;
   margin-bottom: 20px;
-}
-.userMessage span{
   font-family: Arial;
   color:  #445162;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-  margin-left: 10px;
+  resize: none;
+  
 }
 .userButton{
   border-radius: 5px;
@@ -85,6 +81,11 @@
   line-height: 18px;
   justify-content: space-between;
   text-transform: uppercase;
+  border: 3px solid #445162;
+}
+.userButton:hover{
+  color:rgb(200, 255, 0);
+  border-color: rgb(200, 255, 0);
 }
 .companyInformation{
   width: 240px;
@@ -92,13 +93,36 @@
   flex-direction:column;
 }
 
-.icons{
+.icons {
   display:flex;
   flex-direction: row;
   padding-bottom:15px;
   
 }
-.icons h1{
+.icons span:hover{
+  color: rgb(200, 255, 0);
+}
+#skype{
+  width: 24px;
+  height: 26px;
+  background: url('img/sprites.png') -56px -10px;
+}
+#icq{
+  width: 26px; 
+  height: 26px;
+  background: url('img/sprites.png') -10px -10px;
+}
+#mail{
+  width: 22px; 
+  height: 22px;
+  background: url('img/sprites.png') -54px -56px;
+}
+#phone{
+  width: 24px; 
+  height: 23px;
+    background: url('img/sprites.png') -10px -56px;
+}
+.icons span{
   font-family: Arial;
   color:  #ffffff;
   font-size: 16px;
@@ -113,21 +137,23 @@
   
 }
 .iconCircle{
-  width: 55px;
-  height: 55px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
   display:flex;
   margin:5px;
-  
+  justify-content: center;
 }
-.iconCircle h3{
+.iconCircle:hover{
+  background-color: rgb(205, 255, 24);
+}
+.iconCircle i{
   color:  #445161;
   display:flex;
-  justify-content: space-between; 
-  align-items: flex-end;
-  margin-left:5px;
-  margin-bottom:10px;
+  align-items: center;
+  font-size:30px;
+  
  }
 
  .footer{
