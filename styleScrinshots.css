@@ -3,7 +3,7 @@
 
 .scrinshots{
   width: 1280px;
-  height: 496px;
+  height: 510px;
   background-color:  #ffffff;
   display:flex;
   /*justify-content: space-between;*/
@@ -16,7 +16,7 @@
   font-weight: 400;
   line-height: 36px;
   margin-top:50px;
-  margin-bottom:35px;
+  margin-bottom:10px;
   text-align: center;
 }
 .mainDescription{
