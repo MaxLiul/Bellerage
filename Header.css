@@ -15,6 +15,7 @@
 .header{
   display:flex;
   flex-direction: row;
+  
 }
 .logo{
   width: 190px;
@@ -51,6 +52,7 @@ ul{
   flex-direction: row;
   margin-top: 62px;
   margin-left: 219px;
+  height: 20px;
 } 
 li a{
   font-family: Montserrat;
@@ -88,6 +90,61 @@ li a:hover,
   background-position: -33px -5px;
   background-image: url(img/spritesheetHeader.png)
 }
+ .contentHeader{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:240px;
+  width: 589px;
+  margin-left: 666px;
+  justify-content:center;
+  
+} 
+.contentHeader h2{
+  font-family: Raleway;
+  color:  #ffffff;
+  font-size: 36px;
+  font-weight: 500;
+  text-align: center;
+}
+.contentHeader h1{
+  font-family: Raleway;
+  color:  #ffffff;
+  font-size: 52px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contentHeader p{
+  font-family: Montserrat;
+  color:  #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+}
+.headerButton{
+  border-radius: 3px;
+  background-color:  #998675;
+  width: 170px;
+  height: 53px;
+  font-family: Raleway;
+  color:  #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: center;
+  outline: none;
+  border:2px solid transparent;
+}
+.contentHeader a{
+  margin: 0 auto;
+  margin-top:52px;
+}
+.headerButton:hover{
+  color:  #b1abab;
+  border-color:#b1abab; 
+}
 .opportunities{
   background-color: #ffffff;
   display:flex;
@@ -98,6 +155,7 @@ li a:hover,
   padding-top:75px;
   max-width:1200px;
   margin: 0 auto;
+  
 } 
 .marketing,
 .web,
@@ -154,6 +212,13 @@ li a:hover,
   text-align: center;
   padding-top:20px;
 }  
+.opportunitiesText h1:hover{
+  font-family: Raleway;
+  color:  #c7b299;
+}
+.opportunitiesText a{
+  text-decoration: none;
+}
 .opportunitiesText p{
   font-family: Montserrat;
   color:  #8c8c8c;
@@ -161,12 +226,8 @@ li a:hover,
   font-weight: 300;
   line-height: 24px;
   text-align: center;
-  padding-bottom:113px;
+  padding-bottom:75px;
 }
 
 
 
-.footer{
-  height: 111px;
-  background-color: #090909;
-}
