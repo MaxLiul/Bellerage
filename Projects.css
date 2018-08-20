@@ -1,0 +1,77 @@
+@import url(Header.css);
+.projects{
+  display:flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin-top: 81px;
+}
+.projects h1{
+  width: 300px;
+  font-family: Raleway;
+  color:  #555555;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 24px;
+  margin: 0 auto;
+}
+.projects p{
+  width: 757px;
+  font-family: Montserrat;
+  color:  #8c8c8c;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 24px;
+  margin: 0 auto;
+}
+.projects ul{
+  height: 40px;
+  margin:0 auto;
+  /* margin-left:300px;
+  margin-right: 370px; */
+  display:flex;
+  flex-direction: row;
+  padding:0 400px;
+  justify-content: space-between;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.projects li{
+  margin-left: 10px;
+}
+
+.projectButton{
+  border-radius: 3px;
+  background-color: #ffffff;
+  width: 90px;
+  height: 32px;
+  font-family: Montserrat;
+  color:  #8c8c8c;;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+  outline:none;
+}
+.projectButton:hover{
+background-color:  #998675;
+color:#ffffff;
+}
+.projectBlock{
+  width: 100%;
+  padding-left: 376px;
+  padding-right: 376px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+.projectMenu{
+  width: 30%;
+  max-width: 370px;
+  height: 337px;
+  background-color: red;
+  border: 1px solid #000;
+}
