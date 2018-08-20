@@ -61,12 +61,14 @@ color:#ffffff;
 }
 .projectBlock{
   width: 100%;
-  padding-left: 376px;
-  padding-right: 376px;
+  max-width: 1920px;
+  margin-left: 376px;
+  margin-right: 376px;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
+  flex-wrap: wrap;
 }
 .projectMenu{
   width: 30%;
@@ -74,4 +76,5 @@ color:#ffffff;
   height: 337px;
   background-color: red;
   border: 1px solid #000;
+  margin-bottom: 30px;
 }
