@@ -24,32 +24,42 @@
   text-align: center;
   width: 767px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .realizationImg{
   height: 490px;
   display:flex;
-  flex-direction: row;
-  align-content:flex-end;
+  margin-left: 350px;
+  margin-right: 350px;
+  position:relative
 }
 .realizationCenter{
   width: 770px;
   height: 482px;
   background-image: url(img/browser-center.png);
-  margin-left: 218px;
-  position:relative;
+  position: absolute;
+  margin: 0 auto;
+  margin-left: 130px;
+  z-index:1;
+  bottom: 0px;
 }
 .realizationLeft{
+  display:flex;
   width: 770px;
   height: 400px;
-  background-image: url(img/browser-left.png);
-  position:relative;
+  background-image: url(img/browser-right.png);
+  position:absolute;
+  margin-left: 350px;
+  bottom: 0px;
+  
 }
 .realizationRight{
   width: 770px;
   height: 400px;
-  background-image: url(img/browser-right.png);
-  position:relative;
+  background-image: url(img/browser-left.png);
+  position:absolute;
+  margin-left:-100px;
+  bottom: 0px;
 }
 
 .purchase{
