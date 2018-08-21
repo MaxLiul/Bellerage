@@ -1,0 +1,33 @@
+@import url(Header.css);
+
+.sponsor{
+  height: 489px;
+  display:flex;
+  flex-direction: row;
+  padding-left: 181px;
+  padding-right: 181px;
+  justify-content: space-between;
+  background-image: url(img/sponsor.png);
+  margin-top:700px;
+}
+.sponsorImg{
+  width: 210px;
+  background-image: url(img/sponsor_spritesheet.png);
+}
+.sponsorImg1{
+  height: 127px;
+  background-position: -5px -5px;
+ 
+}
+.sponsorImg2{
+  background-position: -5px -142px;
+  height: 210px;
+}
+.sponsorImg3{
+  height: 130px;
+  background-position: -225px -5px;
+}
+.sponsorImg4{
+  height: 164px;
+  background-position: -225px -145px;
+}
