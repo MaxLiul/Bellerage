@@ -5,7 +5,11 @@
   background-color: #ffffff;
   margin-top: 81px;
 }
-.projects h1{
+.projectTextHeader {
+  margin: 0 auto;
+  height: 91px;
+}
+.projectTextHeader h1{
   width: 300px;
   font-family: Raleway;
   color:  #555555;
@@ -14,8 +18,9 @@
   text-align: center;
   padding-bottom: 24px;
   margin: 0 auto;
+  
 }
-.projects p{
+.projectTextHeader p{
   width: 757px;
   font-family: Montserrat;
   color:  #8c8c8c;
@@ -24,7 +29,7 @@
   line-height: 28px;
   text-align: center;
   margin-bottom: 24px;
-  margin: 0 auto;
+  
 }
 .projects ul{
   height: 40px;
@@ -35,7 +40,7 @@
   flex-direction: row;
   padding:0 400px;
   justify-content: space-between;
-  margin-top:20px;
+  margin-top:40px;
   margin-bottom: 20px;
 }
 .projects li{
@@ -60,7 +65,6 @@ background-color:  #998675;
 color:#ffffff;
 }
 .projectBlock{
-  width: 100%;
   max-width: 1920px;
   margin-left: 376px;
   margin-right: 376px;
@@ -71,10 +75,79 @@ color:#ffffff;
   flex-wrap: wrap;
 }
 .projectMenu{
-  width: 30%;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+}
+.projectBlock a{
+  width: 33%;
   max-width: 370px;
   height: 337px;
-  background-color: red;
-  border: 1px solid #000;
-  margin-bottom: 30px;
+  display:flex;
+  flex-direction:column;
+  margin-bottom: 20px;
+ 
+}
+.projectText:hover{
+  background-color:#332b29;
+}
+a{
+  text-decoration: none;
+}
+
+.projectImage{
+  width: 100%;
+  max-width: 370px;
+  height: 237px;
+  background-image: url(img/project.png);
+}
+.projectText{
+  width: 100%;
+  max-width: 370px;
+  height: 100px; 
+  background-color: #fbfaf8;
+}
+
+.projectText h1{
+  font-family: Raleway;
+  color:  #c7b29a;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+  .projectText h2{
+  font-family: Montserrat;
+  color:  #d1d1d1;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.loadButton{
+  border-radius: 3px;
+  background-color:  #998675;
+  width: 170px;
+  height: 50px; 
+  font-family: Raleway;
+  color:  #ffffff;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+  line-height: 23px;/* Приближение из-за подстановки шрифтов */
+  text-align: center;
+  margin: 0 auto;
+}
+.loadButtonBox{
+  display:flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+.loadButton:hover{
+  color:  #b1abab;
+  border-color:#b1abab;
 }
