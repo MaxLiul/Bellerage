@@ -100,6 +100,9 @@ a{
   height: 237px;
   background-image: url(img/project.png);
 }
+.projectImage:hover{
+  opacity:0.7;
+}
 .projectText{
   width: 100%;
   max-width: 370px;

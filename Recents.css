@@ -1,0 +1,50 @@
+@import url(Header.css);
+
+.statistics{
+  height: 300px;
+  background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+  display:flex;
+  flex-direction: row;
+  padding-left: 500px;
+  padding-right: 500px; 
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.statisticBlocs{
+  display:flex;
+  flex-direction: column;
+  width: 140px;
+  margin-top: 70px;
+}
+.statIcon{
+  margin: 0 auto;
+  width:  44px;
+  height: 44px;
+  background-image: url(img/statt_icon.png);
+  margin-bottom: 20px;
+}
+.statisticBlocs p{
+  font-family: Montserrat;
+  color:  #ffffff;
+  font-size: 48px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 200;
+  line-height: 36px;/* Приближение из-за подстановки шрифтов */
+  text-align: center;
+}
+.statisticBlocs .statComment{
+  font-family: Montserrat;
+  color:  #c7b299;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.statUnderline{
+  width: 30px;
+  height: 2px;
+  background-image: url(img/lines.png);
+  
+  margin: 0 auto;
+}
