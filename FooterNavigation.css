@@ -1,0 +1,204 @@
+.footerNavigation{
+  display:flex;
+  padding-left: 380px;
+  padding-right: 380px;
+  padding-top: 80px;
+  box-sizing: border-box;
+  background-color: #121212;
+ }
+.footerMainBlock{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 81px;
+}
+.logotip{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29px;
+}
+
+.footerLogotip{
+  width: 64px;
+  height: 56px;
+  background-position: -67px -5px;
+}
+.footerLogo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 29px;
+}
+.footerLogo h1{
+  font-family: Raleway;
+  color:  #ffffff;
+  font-size: 34px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  text-align: right;
+}
+.footerNavigation .footerBlockLogo p{
+  max-width:258px;
+  font-family: Montserrat;
+  color:  #545454;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 24px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  margin-bottom: 35px;
+}
+.footerNavigation .footerBlockLogo a{
+  font-family: Montserrat;
+  color:  #d1d1d1;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 400;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+}
+.footerNavigation h2{
+  font-family: Raleway;
+  color:  #ffffff;
+  font-size: 24px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.footerNews{
+  margin-top: 15px;
+  border-bottom: 1px solid rgb(65, 64, 64);
+}
+.footerNews span{
+  font-family: Montserrat;
+  color:  #363636;
+  font-size: 12px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  cursor: pointer;
+}
+.footerNews p{
+  font-family: Montserrat;
+  color:  #545454;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  cursor: pointer;
+}
+.footerNews:hover span{
+  font-family: Montserrat;
+  color:  #ffffff;
+  font-size: 12px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  
+}
+.footerNews:hover p{
+  font-family: Montserrat;
+  color:  #c7b299;
+  font-size: 14px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  margin-bottom: 10px;
+}
+ .footerTwitter span{
+  font-family: Montserrat;
+  color:  #363636;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+.footerNews .blueUnderline{
+  color:  #00bff3;
+}
+
+.footerBlockImg{
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footerImg{
+  width: 45%;
+  height: 98px;
+  max-width: 130px;
+  background-image: url(img/footer_photo.png);
+}
+.footer{
+  background-color:  #111111;
+  width: 1920px;
+  height: 111px;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 380px;
+  padding-right: 380px;
+  padding-top: 46px;
+  box-sizing: border-box;
+}
+.footerMenu{
+  display: flex;
+  flex-direction: row;
+}
+.footerMenu p{
+  font-family: Montserrat;
+  color:  #545454;
+  font-size: 13px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  margin-right: 20px;
+}
+.footerMenu p span{
+  font-family: Montserrat;
+  color:  #959595;
+  font-size: 13px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+}
+.footerMenu a{
+  text-decoration: none;
+  color:  #545454;
+  font-size: 13px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+  margin-right: 15px;
+}
+.footerMenu a:hover{
+  font-family: Montserrat;
+  color:  #c7b299;
+  font-size: 13px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: left;
+}
+.footerAutors{
+  display: flex;
+  flex-direction: row;
+}
+.footer .footerAutors p{
+  font-family: Montserrat;
+  color:  #545454;
+  font-size: 13px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: right;
+  margin-right: 20px;
+}
+.footer .footerAutors p span{
+  font-family: Montserrat;
+  color:  #959595;
+  font-size: 13px;/* Приближение из-за подстановки шрифтов */
+  font-weight: 300;
+  line-height: 20px;/* Приближение из-за подстановки шрифтов */
+  text-align: right;
+} 
