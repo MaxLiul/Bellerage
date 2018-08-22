@@ -1,7 +1,8 @@
 .footerNavigation{
+  height: 510px;
   display:flex;
-  padding-left: 380px;
-  padding-right: 380px;
+  /* padding-left: 380px;
+  padding-right: 380px; */
   padding-top: 80px;
   box-sizing: border-box;
   background-color: #121212;
@@ -11,6 +12,8 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
   margin-bottom: 81px;
 }
 .logotip{
@@ -133,16 +136,22 @@
 }
 .footer{
   background-color:  #111111;
-  width: 1920px;
+  width: 100%; 
   height: 111px;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 380px;
-  padding-right: 380px;
+  /* padding-left: 380px;
+  padding-right: 380px; */
   padding-top: 46px;
   box-sizing: border-box;
 }
+.footerBlock{
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}    
 .footerMenu{
   display: flex;
   flex-direction: row;

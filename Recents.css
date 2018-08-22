@@ -1,12 +1,11 @@
-@import url(Header.css);
 
 .statistics{
   height: 300px;
   background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
   display:flex;
   flex-direction: row;
-  padding-left: 500px;
-  padding-right: 500px; 
+  /* padding-left: 500px;
+  padding-right: 500px;  */
   box-sizing: border-box;
   justify-content: space-between;
 }

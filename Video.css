@@ -1,12 +1,13 @@
-@import url(Header.css);
-.movie{
-max-height: 705px;
-background-color: #fbfaf8;
 
+.movie{
+/* max-height: 1000px; */
+background-color: #fbfaf8;
 }
-/* video{
-width: 100%;
-} */
+
+.mainMobile{
+  background-color: #fbfaf8;
+  /* margin-top: 50px; */
+}
 .mobileBlock{
   display:flex;
   flex-direction: row;
@@ -14,11 +15,11 @@ width: 100%;
   padding-top: 79px;
   box-sizing: border-box;
   flex-direction: center;
-  margin-top:376px;
-  padding-left:400px;
-  padding-right: 400px;
+  /* margin-top:376px; */
   box-sizing: border-box;
   justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
   
 }
 .mobileImg{

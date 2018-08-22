@@ -1,33 +1,66 @@
-@import url(Header.css);
+
 
 .sponsor{
   height: 489px;
   display:flex;
   flex-direction: row;
-  padding-left: 181px;
-  padding-right: 181px;
+  /* padding-left: 400px;
+  padding-right: 400px; */
   justify-content: space-between;
   background-image: url(img/sponsor.png);
-  margin-top:700px;
+}
+.sponsorContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 .sponsorImg{
-  width: 210px;
-  background-image: url(img/sponsor_spritesheet.png);
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 210px;
+  align-items: center;
+  max-width: 1250px;
+  margin:0 auto;
+  margin-top: 140px;
 }
 .sponsorImg1{
+  width: 20%;
   height: 127px;
   background-position: -5px -5px;
- 
+  max-width: 210px;
+  background-image: url(img/sponsor_spritesheet.png);
+  
+  
 }
 .sponsorImg2{
+  width: 20%;
   background-position: -5px -142px;
   height: 210px;
+  max-width: 210px; 
+  background-image: url(img/sponsor_spritesheet.png);
+  line-height:210px;
 }
 .sponsorImg3{
+  width: 20%;
   height: 130px;
   background-position: -225px -5px;
+  max-width: 210px;
+  background-image: url(img/sponsor_spritesheet.png);
+  line-height:210px;
 }
 .sponsorImg4{
+  width: 20%;
   height: 164px;
   background-position: -225px -145px;
+  max-width: 210px;
+  background-image: url(img/sponsor_spritesheet.png);
 }
+/* .blockImg{
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+} */

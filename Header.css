@@ -1,6 +1,20 @@
+@import url(Realization.css);
+@import url(Projects.css);
+@import url(Video.css);
+@import url(Recents.css);
+@import url(Posts.css);
+@import url(Sponsor.css);
+@import url(FooterNavigation.css);
 *{
   margin: 0px;
   padding:0px;
+}
+html,
+body{
+  width:100%;
+}
+html{
+  overflow-x: hidden;
 }
 .container{
   max-width: 1920px;
@@ -15,6 +29,9 @@
 .header{
   display:flex;
   flex-direction: row;
+  margin: 0 auto;
+  max-width:1200px;
+  justify-content: space-between;
   
 }
 .logo{
@@ -23,7 +40,7 @@
   display:flex;
   flex-direction: row;
   margin-top:40px;
-  margin-left:376px;
+  
 }
 .logoImg{
     width: 64px;
@@ -51,7 +68,6 @@ ul{
   display:flex;
   flex-direction: row;
   margin-top: 62px;
-  margin-left: 219px;
   height: 20px;
 } 
 li a{
@@ -94,10 +110,9 @@ li a:hover,
   display:flex;
   flex-direction: column;
   justify-content: center;
-  margin-top:240px;
   width: 589px;
-  margin-left: 666px;
-  justify-content:center;
+  margin: 0 auto;
+  margin-top:240px;
   
 } 
 .contentHeader h2{

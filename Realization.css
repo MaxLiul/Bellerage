@@ -1,4 +1,4 @@
-@import url(Header.css);
+
 .realization{
   background-color: #fbfaf8;;
   display:flex;
@@ -29,9 +29,12 @@
 .realizationImg{
   height: 490px;
   display:flex;
-  margin-left: 350px;
-  margin-right: 350px;
-  position:relative
+  margin: 0 auto;
+  /* margin-left: 350px;
+  margin-right: 350px; */
+  position:relative;
+  min-width: 1250px;
+  
 }
 .realizationCenter{
   width: 770px;
@@ -39,7 +42,7 @@
   background-image: url(img/browser-center.png);
   position: absolute;
   margin: 0 auto;
-  margin-left: 130px;
+  left: 230px;
   z-index:1;
   bottom: 0px;
 }
@@ -49,7 +52,7 @@
   height: 400px;
   background-image: url(img/browser-right.png);
   position:absolute;
-  margin-left: 350px;
+  left: 460px;
   bottom: 0px;
   
 }
@@ -58,17 +61,24 @@
   height: 400px;
   background-image: url(img/browser-left.png);
   position:absolute;
-  margin-left:-100px;
+  /* left:-100px; */
   bottom: 0px;
 }
 
 .purchase{
-  display:flex;
-  flex-direction: row;
+  /* display:flex;
+  flex-direction: row; */
   height: 150px;
   background: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+  /* justify-content: space-between; */
+  /* padding: 0 370px; */
+}
+.purchaseBlock{
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 0 370px;
+  max-width: 1250px;
+  margin:0 auto;
 }
 .purchaseText{
   width: 530px;

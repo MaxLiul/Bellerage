@@ -1,4 +1,4 @@
-@import url(Header.css);
+
 .projects{
   display:flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   margin-right: 370px; */
   display:flex;
   flex-direction: row;
-  padding:0 400px;
+  /* padding:0 400px; */
   justify-content: space-between;
   margin-top:40px;
   margin-bottom: 20px;
@@ -65,14 +65,15 @@ background-color:  #998675;
 color:#ffffff;
 }
 .projectBlock{
-  max-width: 1920px;
-  margin-left: 376px;
-  margin-right: 376px;
+  max-width: 1250px;
+  /* margin-left: 376px;
+  margin-right: 376px; */
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: #ffffff;
   flex-wrap: wrap;
+  margin:0 auto;
 }
 .projectMenu{
   margin-bottom: 20px;
