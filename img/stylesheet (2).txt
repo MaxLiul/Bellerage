@@ -4,11 +4,13 @@
     display: block;
 }
 
+
 .sprite-logo-01 {
     width: 210px;
     height: 127px;
     background-position: -5px -5px;
 }
+
 
 .sprite-logo-02 {
     width: 210px;
@@ -16,11 +18,13 @@
     background-position: -5px -142px;
 }
 
+
 .sprite-logo-03 {
     width: 210px;
     height: 130px;
     background-position: -225px -5px;
 }
+
 
 .sprite-logo-04 {
     width: 210px;
