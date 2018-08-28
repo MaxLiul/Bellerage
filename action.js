@@ -40,12 +40,17 @@ function buyCar(eventObj){
   purchase.innerHtml = "";
   var src = "img/ferrari_" + eventObj.target.id + ".jpg";
   let buyDomElement = document.createElement("img");
-  buyDomElement.setAttribute('width', "200px")
+  buyDomElement.setAttribute('width', "200px");
+  buyDomElement.setAttribute('data-price', priceMassiv[eventObj.target.id - 1])
+  buyDomElement.onclick = deleteElement;
   buyDomElement.src = src;
-  purchase.appendChild(buyDomElement);
+  purchase.insertBefore(buyDomElement, purchase.firstChild);
   sumPrice +=priceMassiv[eventObj.target.id - 1];
   totalPrice.textContent = 'Cтоимость покупки: ' + sumPrice + " $";
-  
-  
-
+}
+function deleteElement(eventObj){
+  purchase.removeChild(eventObj.target);
+  console.log(eventObj.target.dataset);
+  sumPrice -= eventObj.target.dataset.price;
+  totalPrice.textContent = 'Cтоимость покупки: ' + sumPrice + " $";
 }
