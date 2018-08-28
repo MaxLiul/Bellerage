@@ -1,0 +1,76 @@
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+#big_picture{
+  max-width: 1500px;
+  height: 600px;  
+  display:flex;
+  margin: 0 auto;
+  background-color: yellow;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.gallery{
+  max-width: 1500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: center;
+}
+.buyButton{
+  width: 80px;
+  height: 50px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+img{
+  margin-bottom: 10px;
+}
+.car_image{
+   display: flex;
+   flex-direction: column;
+   
+}
+.products{
+  max-width: 1500px;
+  height: 70px;
+  display:flex;
+  margin: 0 auto;
+  background-color: green;
+  margin: 0 auto;
+  align-items: center;
+}
+.products p{
+  font-size:50px;
+  color:red;
+}
+#purchase{
+  max-width: 1500px;
+  min-height: 400px;  
+  display:flex;
+  margin: 0 auto;
+  background-color: #2485A3;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+#purchase img{
+  width: 30%;
+}
+#totalPrice{
+  max-width: 1500px;
+  height: 80px;
+  display: flex;
+  background-color: yellow;
+  font-size: 30px;
+  color: red;
+  align-items: center;
+  justify-content: center;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
