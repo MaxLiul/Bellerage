@@ -8,11 +8,13 @@ var gameIsRunning = false; // is game started
 var snake_timer; // snake's timer
 var food_timer;
 var score = 0; // result 
+var scoreBoard = document.createElement('div');
+
 
 function init(){
   prepareGameField() // field generation
   var wrap = document.getElementsByClassName('wrap')[0];
-  //console.log(document.getElementsByClassName('wrap'));
+  
   //prepare a size of a container
   if(16* (FIELD_SIZE_X+1)<380){
     wrap.style.width = '380px';
@@ -25,7 +27,11 @@ document.getElementById('snake-start').addEventListener('click', startGame);
 document.getElementById('snake-renew').addEventListener('click', refreshGame);
 //actions for keyBoard
 window.addEventListener('keydown', changeDirection); // ===addEventListener('keydown', changeDirection)
-//  console.log(document.getElementById('snake-field'))
+
+scoreBoard.className = 'scoreBoard';
+wrap.appendChild(scoreBoard);
+
+
 }
 //generation of a game field
 function prepareGameField(){
@@ -55,8 +61,9 @@ function startGame(){
   respawn();
 
   snake_timer = setInterval(move, SNAKE_SPEED);
-  setTimeout(createFood, 1000);
+  setTimeout(createFood, 500);
 }
+/////////////////////////////////////////////////////////////////
 
 // the function of the snake position
 function respawn(){
@@ -75,11 +82,12 @@ function respawn(){
   snake_tail.setAttribute('class', snake_tail.getAttribute('class') + ' snake-unit');
   snake.push(snake_head);
   snake.push(snake_tail);
-  // console.log(snake_head.className, 'snake_head');
+  //console.log(snake, 'snake');
   // console.log(snake_tail.className, 'snake_tail');
 }
 // a movement of a snake
 function move(){
+  console.log(snake, 'snake');
   var snake_head_classes = snake[snake.length-1].getAttribute('class').split(' '); // получение головы змеи
 // movement of a head
 //console.log('snakeClass', snake_head_classes);
@@ -135,14 +143,15 @@ function isSnakeUnit(unit){
 
 function haveFood(unit){
   var check = false;
-
   var unit_classes = unit.getAttribute('class').split(' ');
   //if food
   if(unit_classes.includes('food-unit')){
   //  console.log(unit_classes.includes('food-unit'), 'unit_classes');
     check = true;
     createFood();
+    createBarrier();
     score++;
+    scoreBoard.textContent = 'Набранные очки: ' + score.toString();
   }
   return check;
 }
@@ -151,7 +160,7 @@ function createFood(){
   while(!foodCreated){
     //choose random mesh
     var food_x = Math.floor(Math.random()*FIELD_SIZE_X);
-    var food_y = Math.floor(Math.random()*FIELD_SIZE_Y)
+    var food_y = Math.floor(Math.random()*FIELD_SIZE_Y);
 
     var food_cell = document.getElementsByClassName('cell-'+(food_y)+'-'+(food_x))[0];
     var food_cell_classes = food_cell.getAttribute('class').split(' ');
@@ -162,14 +171,28 @@ function createFood(){
         for(i =0; i<food_cell_classes.length; i++){
         classes += food_cell_classes[i] + ' ';
     }
-    console.log(classes, 'classes')
+    //console.log(classes, 'classes')
     
     food_cell.setAttribute('class', classes + 'food-unit');
     foodCreated = true;
-    console.log(food_cell, 'food_cell')
+    //console.log(food_cell, 'food_cell')
   }
 }
 }
+function createBarrier(){
+  var barrier_x = Math.floor(Math.random()*FIELD_SIZE_X);
+  var barrier_y = Math.floor(Math.random()*FIELD_SIZE_Y);
+  var barrier_cell = document.getElementsByClassName('cell-'+(barrier_y)+'-'+(barrier_x))[0];
+  var barrier_cell_classes = barrier_cell.getAttribute('class').split(' ');
+  if(!barrier_cell_classes.includes('snake-unit')){
+    var classes = '';
+      for(i =0; i<barrier_cell_classes.length; i++){
+      classes += barrier_cell_classes[i] + ' ';
+  }
+  barrier_cell.setAttribute('class', classes +'barrier-unit');
+  }
+}
+
 function changeDirection(e){
   switch(e.keyCode) {
     case 37: //left
