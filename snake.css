@@ -19,6 +19,9 @@
 .game-table{
   border-collapse: collapse;
   background-color: #3e3e3e;
+  font-size: 30px;
+  color: green;
+  line-height: 380px;
 }
 td.game-table-cell{
   width: 15px;
@@ -50,5 +53,17 @@ td.game-table-cell{
   cursor: pointer;
   float:left;
   margin-right: 10px;
-
 }
+
+/* #game-over{
+  width: 350px;
+  height: 350px;
+  background-color: green;
+  color: red;
+  font-size: 20px;
+  display:flex;
+  justify-content: center;
+  line-height: 300px;
+  visibility: hidden;
+
+} */

@@ -1,7 +1,7 @@
 // global variables:
-// var FIELD_SIZE_X = 20;
-// var FIELD_SIZE_Y = 20;
-var SNAKE_SPEED = 300; //an interval between skake's movement
+var FIELD_SIZE_X = 20;
+var FIELD_SIZE_Y = 20;
+var SNAKE_SPEED = 200; //an interval between skake's movement
 var snake = []; // it is a snake
 var direction = 'y+'; // movement along y axis down
 var gameIsRunning = false; // is game started
@@ -231,9 +231,15 @@ function changeDirection(e){
 }
 // function af the game's finish
 function finishTheGame(){
+  var snake_field = document.getElementsByClassName('game-table')[0];
+  console.log('finish', snake_field.style);
   gameIsRunning = false;
   clearInterval(snake_timer);
-  alert('You lose! your result is: ' +score.toString());
+  snake_field.style.backgroundColor = 'red';
+  snake_field.style.width = '380px';
+  snake_field.style.height = '380px';
+  snake_field.textContent = 'You lose! Your result is: ' +score.toString();
+  //alert('You lose! your result is: ' +score.toString());
 }
 function refreshGame(){
   location.reload();
