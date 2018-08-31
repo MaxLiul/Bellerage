@@ -236,8 +236,8 @@ function finishTheGame(){
   gameIsRunning = false;
   clearInterval(snake_timer);
   snake_field.style.backgroundColor = 'red';
-  snake_field.style.width = '380px';
-  snake_field.style.height = '380px';
+  snake_field.style.width = '360px';
+  snake_field.style.height = '360px';
   snake_field.textContent = 'You lose! Your result is: ' +score.toString();
   //alert('You lose! your result is: ' +score.toString());
 }
