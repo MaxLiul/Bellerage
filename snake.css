@@ -29,10 +29,10 @@ td.game-table-cell{
   background-color: white;
 }
 .food-unit{
-  background-color: red;
+  background-color: green;
 }
 .barrier-unit{
-  background-color: green;
+  background-color: red;
 }
 .buttons{
   display: inline-block;
