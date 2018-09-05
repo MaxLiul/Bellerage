@@ -5,34 +5,23 @@
   flex-direction: row;
 }
 .cellClassBlack{
+ background-color: yellow;
+}
+.cellClass{
   display:flex;
   width: 50px;
   flex-direction: row;
   border: 1px solid blue;
-  background-color: yellow;
   justify-content: center;
   font-size:25px;
   align-items: center;
-  
 }
 
 .cellClassWhite{
-  display:flex;
-  width: 50px;
-  flex-direction: row;
-  border: 1px solid blue;
   background-color: white;
-  justify-content: center;
-  font-size:25px;
-  align-items: center;
+  
 }
 .redCell{
   background-color: red;
-  display:flex;
-  width: 50px;
-  flex-direction: row;
-  border: 1px solid blue;
-  justify-content: center;
-  font-size:25px;
-  align-items: center;
+  
 }
