@@ -40,7 +40,7 @@ class App extends Component {
     return ( 
       <div className = 'inputBlock' >
         <input onChange = {this.handleChange} value = {value}/>
-        <button onClick = {this.addNews} > Создать новость </button>
+        <button onClick = {this.addNews}> Создать новость </button>
         <span>Подтвердить публикацию
          <input type = "checkbox" className = "check_box" onChange = {this.isChecked}/></span>
         {posts} 
