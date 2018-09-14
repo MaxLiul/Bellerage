@@ -1,0 +1,19 @@
+*{
+  margin: 0 auto;
+}
+
+.App {
+  text-align: center;
+}
+
+.inputBlock{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.check_box{
+  margin-left: 10px;
+}
+span{
+  color:red;
+}
