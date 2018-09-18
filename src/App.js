@@ -5,26 +5,33 @@ import NewsPost from './NewsPost';
 class App extends Component {
 
   state = {
-    value: '',
-    array: [],
-    check: false
+    newsValue: '',
+    listOfNews: [],
+    checkCondition: false
   }
 
   handleChange = event => {
-    const text = event.target.value;
+   // const value = event.target.value;
     this.setState({
-      value: text
+      newsValue: event.target.value
     });
   };
+  
   isChecked = () => {
-    this.setState(state => ({check: !state.check}));
+    this.setState(prevState => ({checkCondition: !prevState.checkCondition}));
   }
 
   addNews = () => {
-    if (this.state.check === true) {
+    const {
+      checkCondition,
+      newsValue,
+      listOfNews
+    } = this.state;
+
+    if (checkCondition === true) {
       this.setState({
-        array : [this.state.value, ...this.state.array],
-        value : '',
+        listOfNews : [newsValue, ...listOfNews],
+        newsValue : '',
       })
     }
     else{
@@ -32,14 +39,15 @@ class App extends Component {
     }
 
   }
+
   render() {
-    const {value, array} = this.state;
-    const posts = array.map((item, index) => {
-      return <NewsPost key = {index} text = {item}/>
+    const {newsValue, listOfNews} = this.state;
+    const posts = listOfNews.map((item, index) => {
+      return <NewsPost key = {index} newsText = {item}/>
     })
     return ( 
       <div className = 'inputBlock' >
-        <input onChange = {this.handleChange} value = {value}/>
+        <input onChange = {this.handleChange} value = {newsValue}/>
         <button onClick = {this.addNews}> Создать новость </button>
         <span>Подтвердить публикацию
          <input type = "checkbox" className = "check_box" onChange = {this.isChecked}/></span>

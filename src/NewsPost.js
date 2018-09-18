@@ -1,13 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class NewsPost extends Component {
-  
-  render() {
-   const {text} = this.props;
-    return (
-      <p> {text}</p>
-    );
+function NewsPost(props) {
+   return <p> {props.newsText}</p>
   }
-}
-
 export default NewsPost;
