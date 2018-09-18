@@ -1,0 +1,15 @@
+.subTitle{
+  display: flex;
+  margin-bottom: 20px;
+  margin-left:0;
+}
+
+.inputForm{
+  flex-direction: column;
+  margin:0;
+  justify-content: left;
+
+}
+input{
+  width: 100%;
+}

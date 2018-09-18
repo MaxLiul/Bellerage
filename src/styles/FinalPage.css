@@ -1,0 +1,12 @@
+.contentBlock{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  margin-top: 20px;
+}
+.subTitle{
+  display: flex;
+  margin-bottom: 20px;
+  margin-left:0;
+}

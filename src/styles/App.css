@@ -1,0 +1,19 @@
+*{
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.App {
+  width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.contentBlock{
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  margin-top: 20px;
+}
+
