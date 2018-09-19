@@ -4,20 +4,22 @@ import VideoPlayerPage from './VideoPlayerPage';
 import Header from './Header'
 import CardNumberPage from './CardNumberPage';
 import ModalPage from './ModalPage';
+
 class Switcher extends Component {
   state = {
     page: 1,
   };
 
-  goToSelectedPage = (newPageNumber) => {
-    this.setState({
-      page : newPageNumber
-    })
+  goToSelectedPage = (page) => {
+    this.setState({ page })
   }
 
-  render() {
-    const {page} = this.state;
-    const {goToSelectedPage} = this;
+  render() {    
+    const {
+      state : {page}, 
+      goToSelectedPage
+    } = this;
+
     let content = null;
     switch (page) {
       case 1:

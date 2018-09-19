@@ -12,8 +12,12 @@ class Switcher extends Component {
   }
 
   render() {
-    const {videoRef} = this;
-    // videoRef.current.play()
+    const {
+      videoRef,
+      playVideo,
+      pauseVideo
+    } = this;
+
     return (
       <div className="VideoPlayer">
         <div>
@@ -22,8 +26,8 @@ class Switcher extends Component {
           </video>
         </div>
         <div>
-          <button className='videoButton' type='button' onClick={this.playVideo}>Play</button>
-          <button className='videoButton' type='button' onClick={this.pauseVideo}>Pause</button>
+          <button className='videoButton' type='button' onClick={playVideo}>Play</button>
+          <button className='videoButton' type='button' onClick={pauseVideo}>Pause</button>
         </div>
       </div>
     );

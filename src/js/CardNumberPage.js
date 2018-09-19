@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../styles/CardNumberPage.css'
 
 class CardNumber extends Component {
   state = {
@@ -7,24 +6,33 @@ class CardNumber extends Component {
   }
 
   formatCardCode = event => {
-    let newValue = event.target.value;
-    if (newValue) {
-      newValue = newValue
-        .replace(/\s+/g, '')
-        .match(/.{1,4}/g)
-        .join(' ');
+    const {value} = event.target;
+
+    let newValue = '';
+    if (value) {
+      const strippedValue = value.replace(/\s+/g, '');
+
+      if (strippedValue.length > 16)
+        return;
+      
+      newValue = strippedValue.match(/.{1,4}/g).join(' ');
     }
 
-    this.setState({value : newValue});
+    this.setState({ value : newValue });
   }
 
   render() {
-    let {value} = this.state;
+    const {
+      state : {
+        value
+      },
+      formatCardCode
+    } = this;
     
     return (
-      <div className="CardNumber">
+      <div>
         <form name='bankCardForm'>
-          <input type = 'text' id='cardInput' value={value}  placeholder='Введите номер карты' onChange={this.formatCardCode}/>
+          <input type = 'text' id='cardInput' value={value}  placeholder='Введите номер карты' onChange={formatCardCode}/>
         </form>
       </div>
     );
