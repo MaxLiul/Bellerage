@@ -1,0 +1,13 @@
+#root{
+  height: 100%;
+  height: 100%;
+  position:relative;
+}
+.Switcher {
+  text-align: center;
+  height: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
