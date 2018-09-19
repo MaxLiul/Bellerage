@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import PersonalInfo from './PersonalInfo';
-import SubmitButton from './SubmitButton';
 import CardInfo from './CardInfo';
 import FinalPage from './FinalPage';
 import './styles/App.css';
 
 class App extends Component {
+
   state = {
     step : 1,
     firstName : '',
@@ -15,10 +15,13 @@ class App extends Component {
     cardNumber : '' 
   }
 
-  changeFormField = (name, value) => {
-    this.setState({
-      [name] : value
-    });
+  changeFormField = event => {
+    const {
+      name,
+      value
+    } = event.target;
+
+    this.setState({[name] : value});
   }
 
   goToNextPage = () => {
@@ -30,14 +33,14 @@ class App extends Component {
   }
 
   goToSelectedPage = (pageNumber) => {
-    if(this.state.step > pageNumber){
+    const { step } = this.state;
+
+    if(step > pageNumber){
       this.setState({step : pageNumber})
     }
   }
 
   render() {
-    // const {step, isButtonDisabled, firstName, lastName, email} = this.state;
-    // const changeFormField = this.changeFormField; 
     const { 
       state: { 
         step, 
@@ -54,39 +57,43 @@ class App extends Component {
     let page = null;
 
     switch(step){
+
       case 1 : {
         const personalInfoProps = {
           firstName, 
           lastName, 
           email,
-          changeFormField
-          // changeFormField: this.changeFormField
+          changeFormField         
         };
-
         isButtonActive = !!firstName && !!lastName && email.match('@');
         page = <PersonalInfo {...personalInfoProps} />;
         break;
       } 
+
       case 2 : {
         isButtonActive = cardNumber.length === 16;
         page =<CardInfo cardNumber={cardNumber} changeFormField={changeFormField} />;
         break;
       }
+
       case 3 : {
         page =<FinalPage/>
         break;
       }
+
       default: 
         break;
     }
-
-    
 
     return (
       <div className="App">
         <Header step={step} onClick={goToSelectedPage} />
         {page}
-        <SubmitButton onClick={goToNextPage} disabled={!isButtonActive} />      
+        <div className="SubmitButton">
+          <button className='buttonNext' disabled={!isButtonActive} onClick={goToNextPage}>
+            Next
+          </button>
+        </div>   
       </div>
     );
   }

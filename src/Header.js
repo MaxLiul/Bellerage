@@ -2,14 +2,20 @@ import React, { Component } from 'react';
 import './styles/Header.css';
 
 class Header extends Component {
+
   changePage = event => {
     const { onClick } = this.props;
     onClick(+event.target.innerText);
-  }
+  };
 
-  render() {
-    const {step} = this.props;
-    const {changePage} = this;
+  render() {    
+    const {
+      props : {
+        step
+      },
+      changePage
+    }= this;
+   
     return (
       <header className="Header">
         <div className = 'header_sub_item'>

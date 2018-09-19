@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './styles/FinalPage.css';
 import './styles/App.css';
 
-class FinalPage extends Component {
-  render() {
-    return (
-      <div className="contentBlock">
-        <h1 className = 'subTitle'> Поздравляем! </h1>
-      </div>
-    );
-  }
-}
+const FinalPage = () => (
+  <div className="contentBlock">
+    <h1 className = 'subTitle'> Поздравляем! </h1>
+  </div>
+);
+
 export default FinalPage;

@@ -17,3 +17,16 @@
   margin-top: 20px;
 }
 
+.SubmitButton{
+  display: flex;
+  justify-content: right;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.buttonNext{
+  background-color: #eee;
+  margin-right: 0px;
+  float: left;
+}
+
