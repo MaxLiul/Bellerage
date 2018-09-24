@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import '../styles/ModalPage.css';
 
 function ModalWindow(props){
-  const { open, onClick } = props;
+  const { open, modalWindowAction } = props;
   if (open) {
     return ReactDOM.createPortal(
       <div className='modalWindowWrapper'>
         <div className='modalWindow'>
-          <button type='button' className='buttonModal' onClick={onClick}>Закрыть окно</button>
+          <button type='button' className='buttonModal' onClick={modalWindowAction}>Закрыть окно</button>
         </div>
       </div>, 
       document.querySelector('#modal')
@@ -38,7 +38,7 @@ class ModalPage extends Component {
     return (
       <div className="ModalButton">
         <button type='button' className='buttonModal' onClick={openModalWindow}>Show modal!</button>
-        <ModalWindow open = {open} onClick={openModalWindow}/>
+        <ModalWindow open = {open} modalWindowAction={openModalWindow}/>
       </div>
     );
   }
