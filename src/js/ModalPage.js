@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-import '../styles/ModalPage.css';
 import ReactDOM from 'react-dom';
+import '../styles/ModalPage.css';
 
 function ModalWindow(props){
   const { open, onClick } = props;
-  if(open){
+  if (open) {
     return ReactDOM.createPortal(
-    <div className='modalWindowWrapper'>
-      <div className='modalWindow'>
-        <button type='button' className='buttonModal' onClick={onClick}>Закрыть окно</button>
-      </div>
-    </div>, 
-    document.querySelector('#modal'));
-   }
+      <div className='modalWindowWrapper'>
+        <div className='modalWindow'>
+          <button type='button' className='buttonModal' onClick={onClick}>Закрыть окно</button>
+        </div>
+      </div>, 
+      document.querySelector('#modal')
+    );
+  }
   return null;
-  };
+};
 
 
 class ModalPage extends Component {
@@ -32,7 +33,8 @@ class ModalPage extends Component {
         open
       },
       openModalWindow
-      }=this;
+    } = this;
+
     return (
       <div className="ModalButton">
         <button type='button' className='buttonModal' onClick={openModalWindow}>Show modal!</button>

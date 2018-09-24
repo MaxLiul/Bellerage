@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/VideoPlayerPage.css'
 
-class Switcher extends Component {
-  videoRef = React.createRef();
- 
-  playVideo = () => {
-    this.videoRef.current.play();
-  };
-  pauseVideo = () => {
-    this.videoRef.current.pause();
-  }
+function VideoPlayer(props) {
+  const videoRef = React.createRef();
+  const {
+    playVideo,
+    pauseVideo
+  } = props;
 
-  render() {
-    const {
-      videoRef,
-      playVideo,
-      pauseVideo
-    } = this;
+  // const playVideo = () => {videoRef.current.play();};
 
     return (
       <div className="VideoPlayer">
@@ -26,13 +18,12 @@ class Switcher extends Component {
           </video>
         </div>
         <div>
-          <button className='videoButton' type='button' onClick={playVideo}>Play</button>
-          <button className='videoButton' type='button' onClick={pauseVideo}>Pause</button>
+          <button className='videoButton' type='button' onClick={playVideo.bind(this, videoRef)}>Play</button>
+          <button className='videoButton' type='button' onClick={pauseVideo.bind(this, videoRef)}>Pause</button>
         </div>
       </div>
     );
   }
-}
 
-export default Switcher;
+export default VideoPlayer;
 

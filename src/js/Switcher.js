@@ -10,23 +10,38 @@ class Switcher extends Component {
     page: 1,
   };
 
-  goToSelectedPage = (page) => {
-    this.setState({ page })
+  goToSelectedPage = (event) => {
+    this.setState({ page : +event.target.dataset.value })
   }
-
+  
+   playVideo = (videoRef) => {
+     videoRef.current.play();
+    };
+    pauseVideo = (videoRef) => {
+      videoRef.current.pause();
+    }
+  
   render() {    
     const {
       state : {page}, 
-      goToSelectedPage
+      goToSelectedPage,
+      playVideo,
+      pauseVideo
     } = this;
 
     let content = null;
+
+    const videoPropsObject = {
+      playVideo,
+      pauseVideo
+    }
+  
     switch (page) {
       case 1:
-        content = <VideoPlayerPage/>;      
+        content = <VideoPlayerPage  {...videoPropsObject} />;      
         break;
       case 2: 
-        content = <CardNumberPage/>;
+        content = <CardNumberPage />;
         break
       case 3:
         content = <ModalPage />
@@ -34,9 +49,13 @@ class Switcher extends Component {
       default:
         break;
     }
-    return (
+    const headerPropsObject = {
+      page,
+      goToSelectedPage
+    }
+    return (      
       <div className="Switcher">
-        <Header page={page} onClick={goToSelectedPage}/>
+        <Header {...headerPropsObject} />
         {content}
       </div>
     );
