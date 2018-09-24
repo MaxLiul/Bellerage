@@ -40,7 +40,7 @@ class Switcher extends Component{
           <Switch>        
             <Route exact path='/' component={Main} />
             <Route exact path='/private' render={ () => {
-              return isAuthorized ?  <SecretPage /> : (<Redirect to='/' />)
+              return isAuthorized ?  <SecretPage /> : (<Redirect to='/auth' />)
             }} />
             <Route exact path='/public' component={PublicPage} />
             <Route exact path='/auth' render={ () =>{ 
@@ -50,11 +50,7 @@ class Switcher extends Component{
         </div>
       </div>
     )
-  
-    
   }
 }
-  
-  
 
 export default Switcher;

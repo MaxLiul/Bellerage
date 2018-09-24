@@ -16,11 +16,10 @@ class Home  extends Component{
     this.setState({[name] : value});
   }
 
-  authorizeUser = states => {
+  authorizeUser = emailPasswordArray => {
     
-    if(states[0] === '123' && states[1] === '123'){
-      this.props.changeAutorizationStatus();
-    
+    if(emailPasswordArray[0] === '123' && emailPasswordArray[1] === '123'){
+      this.props.changeAutorizationStatus();    
     }
   }
 
@@ -42,7 +41,7 @@ class Home  extends Component{
       </div>
     )
   }
-  }
+}
   
   
 
