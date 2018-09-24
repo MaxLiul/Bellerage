@@ -3,12 +3,12 @@ import '../styles/Header.css';
 
 function Header({ goToSelectedPage }) {
   
+  const menuItems = ['Video Player', 'Card Number Formating', 'Modal Button']
+  
   return (
     <nav className="Header">
       <ul className = 'headerNavigation'>
-        <li data-value={1} onClick={goToSelectedPage}>Video Player</li> 
-        <li data-value={2} onClick={goToSelectedPage}>Card Number Formating</li>
-        <li data-value={3} onClick={goToSelectedPage}>Modal Button</li>
+        {menuItems.map((menuItem, index) => <li data-value={index+1} onClick={goToSelectedPage}>{menuItem}</li>)} 
       </ul>
     </nav>
   );
