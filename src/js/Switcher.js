@@ -9,35 +9,40 @@ class Switcher extends Component {
   state = {
     page: 1,
   };
+  
+  videoRef = React.createRef();
 
   goToSelectedPage = (event) => {
     this.setState({ page : +event.target.dataset.value })
   }
   
-   playVideo = (videoRef) => {
-     videoRef.current.play();
-    };
-    pauseVideo = (videoRef) => {
-      videoRef.current.pause();
-    }
+  playVideo = () => {
+    this.videoRef.current.play();
+  };
+
+  pauseVideo = () => {
+    this.videoRef.current.pause();
+  }
   
   render() {    
     const {
       state : {page}, 
       goToSelectedPage,
       playVideo,
-      pauseVideo
+      pauseVideo,
+      videoRef
     } = this;
 
     let content = null;
-
-    const videoPropsObject = {
-      playVideo,
-      pauseVideo
-    }
   
     switch (page) {
       case 1:
+        const videoPropsObject = {
+          playVideo,
+          pauseVideo,
+          videoRef
+        }
+        
         content = <VideoPlayerPage  {...videoPropsObject} />;      
         break;
       case 2: 
