@@ -1,10 +1,9 @@
 import React from 'react';
 import '../styles/Header.css';
 
+const menuItems = ['Video Player', 'Card Number Formating', 'Modal Button'];
+
 function Header({ goToSelectedPage }) {
-  
-  const menuItems = ['Video Player', 'Card Number Formating', 'Modal Button']
-  
   return (
     <nav className="Header">
       <ul className = 'headerNavigation'>
