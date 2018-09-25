@@ -1,56 +1,71 @@
 import React, { Component } from 'react';
-import { Link, Route } from 'react-router-dom';
-import { Redirect } from 'react-router';
-import { Switch } from 'react-router'
+import { connect } from 'react-redux'
 import '../styles/Switcher.css';
-import Home from './Home'
-
-const SecretPage = () => <p>Секретная страница</p>
-const PublicPage = () => <p>Публичная страница</p>
-const Main = () => <p>Главная</p>
+import { addNewProduct, pushToFarm } from './actions.js'
+// import Home from './Home'
+let totalPrice = 0;
  
 class Switcher extends Component{
-  state = {
-    isAuthorized : false
-  };
   
-  changeAutorizationStatus = () => {
-    this.setState({isAuthorized : true})
-  }
-
   render(){
     const {
-      state : {
-        isAuthorized
-      },
-      changeAutorizationStatus
-    } = this; 
+      information, 
+      setNewProduct,
+      pushToFarm
+    } = this.props;
+    const productName = information.map((item, index) => <li className='productList' key={index}>Название: {item.productName}</li>)
+    const productData = information.map((item, index) => <li className='productList' key={index}>{item.date}</li>)
+    const productPrice = information.map((item, index) => <li className='productList' key={index}>Цена: {item.productPrice}</li>)
     
+    totalPrice+=productPrice;
+    
+    console.log('product', totalPrice);
+    // const { information } = this.props;
     return (
-      <div>
-        <ul className='menu'>
-          <li><Link to='/'>Главная</Link></li>
-          <li><Link to='/private'>Секретная страница</Link></li>
-          <li><Link to='/public'>Публичная страница</Link></li>
-          <li><Link to='/auth'>Войти</Link></li>
-        </ul>
-  
-        <hr />
-        <div className='contentBlock'> 
-          <Switch>        
-            <Route exact path='/' component={Main} />
-            <Route exact path='/private' render={ () => {
-              return isAuthorized ?  <SecretPage /> : (<Redirect to='/auth' />)
-            }} />
-            <Route exact path='/public' component={PublicPage} />
-            <Route exact path='/auth' render={ () =>{ 
-              return isAuthorized ? (<Redirect to='/' />) : <Home changeAutorizationStatus={changeAutorizationStatus} />
-            }} />
-          </Switch>  
+      <div className='Switcher'>
+        <div className='newOrders commonProps'>
+          <h2>Новые заказы в магазине</h2>
+          <div>
+            <button type='button' onClick={setNewProduct}>Создать заказ</button>
+            <button type='button' onClick={pushToFarm}>Отправить заказ на ферму</button>
+          </div>
+          <ul>{productName} {productPrice} </ul>
+        </div>
+        {/* <p> Название товара: {productName}</p>
+        <p> Дата: {date} </p> */}
+        <div className='productionOnFarm commonProps'>
+          <h2>Производство на ферме</h2>
+          <button type='button' >Отправить урожай клиенту</button>
+        </div>
+        <div className='budget commonProps'>
+          <h2>Бюджет</h2>
+          <div className='orderList'>
+            <p>Всего получено денег: {}</p>
+            <p>Расходы продавцов:</p>
+            <p>Расходы на ферме:</p>
+            <p>Расходы на доставку:</p>
+            <p>Итого:</p>
+          </div>
         </div>
       </div>
     )
   }
 }
 
-export default Switcher;
+const mapStateToProps = store => {
+  return {
+    information : store.information,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setNewProduct: () => dispatch(addNewProduct()),
+    pushToFarm: () => dispatch(pushToFarm())
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Switcher);

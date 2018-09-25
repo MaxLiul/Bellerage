@@ -1,13 +1,38 @@
-.menu{
-  margin-left: 40px;  
-}
-.menu li{
-  margin-top: 5px;
-  
-}
-
-.contentBlock{
-  margin-top: 15px;
-  margin-left: 15px;
+.Switcher{
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  max-width: 1250px;
+  width: 100%;
+  justify-content: space-between;
 }
 
+.commonProps{
+  background-color: rgba(211, 201, 201, 0.3);
+  width: 30%;
+}
+
+.Switcher h2{
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.Switcher button{
+  margin-left: 10px;
+}
+
+.orderList{
+  margin-left: 10px;
+}
+.orderList p{
+  margin-bottom: 10px;
+}
+
+.productList{
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: rgba(73, 40, 192, 0.2);
+  list-style: none;
+  width: 80%;
+}
