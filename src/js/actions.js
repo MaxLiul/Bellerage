@@ -1,12 +1,13 @@
-export const addNewProduct = () => {
+export const addNewProduct = (orderProduct) => {
   return {
     type : 'ADD_PRODUCT',
-  //  payload : 'productId'
+    payload : orderProduct
   }
 }
 
-export const pushToFarm = () => {
+export const pushToFarm = (farmProduct) => {
   return {
-    type: 'PUSH_FARM'
+    type: 'PUSH_FARM',
+    payload : farmProduct
   }
 }

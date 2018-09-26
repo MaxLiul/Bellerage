@@ -2,22 +2,46 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import '../styles/Switcher.css';
 import { addNewProduct, pushToFarm } from './actions.js'
+import { initialStateFarm } from './reducers.js'
 // import Home from './Home'
 let totalPrice = 0;
- 
+const productList = ['Хрен','Морковка','Лук','Помидорки']
 class Switcher extends Component{
+
+  handleAddProduct = () => {
+    const randomIndex = Math.floor(Math.random() * productList.length)
+    const order = {
+      productName: productList[randomIndex],
+      date: new Date().toUTCString(),
+      productPrice: Math.floor(Math.random() * 1000)
+    }
+    
+    this.props.addNewProduct(order)
+  };
   
+  handleAddFarm = () => {
+    this.props.pushToFarm( initialStateFarm)
+  }
   render(){
     const {
-      information, 
-      setNewProduct,
-      pushToFarm
+      shopOrder, 
     } = this.props;
-    const productName = information.map((item, index) => <li className='productList' key={index}>Название: {item.productName}</li>)
-    const productData = information.map((item, index) => <li className='productList' key={index}>{item.date}</li>)
-    const productPrice = information.map((item, index) => <li className='productList' key={index}>Цена: {item.productPrice}</li>)
+    const {handleAddProduct, handleAddFarm} = this;
+    const orderProduct = shopOrder.map((item, index) =>{
+      return (
+        <div className='orderBlock' key={index} >
+          <div className='productNameAndPrice'>
+            <li>Название: {item.productName}</li>
+            <li>Цена: {item.productPrice} </li>
+          </div>
+          <li>Создан: {item.date}</li>
+        </div>
+      )
+    }) 
+    // const productData = information.map((item, index) => <li  key={index}>{item.date}</li>)
+    // const productPrice = information.map((item, index) => <li key={index}>Цена: {item.productPrice}</li>)
     
-    totalPrice+=productPrice;
+   // totalPrice+=productPrice;
     
     console.log('product', totalPrice);
     // const { information } = this.props;
@@ -26,10 +50,10 @@ class Switcher extends Component{
         <div className='newOrders commonProps'>
           <h2>Новые заказы в магазине</h2>
           <div>
-            <button type='button' onClick={setNewProduct}>Создать заказ</button>
-            <button type='button' onClick={pushToFarm}>Отправить заказ на ферму</button>
+            <button type='button' onClick={handleAddProduct}>Создать заказ</button>
+            <button type='button' onClick={handleAddFarm}>Отправить заказ на ферму</button>
           </div>
-          <ul>{productName} {productPrice} </ul>
+          <ul> {orderProduct}</ul>
         </div>
         {/* <p> Название товара: {productName}</p>
         <p> Дата: {date} </p> */}
@@ -52,16 +76,16 @@ class Switcher extends Component{
   }
 }
 
-const mapStateToProps = store => {
+const mapStateToProps = state => {
   return {
-    information : store.information,
+    shopOrder : state.shopOrder,
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    setNewProduct: () => dispatch(addNewProduct()),
-    pushToFarm: () => dispatch(pushToFarm())
+    addNewProduct: (orderProduct) => dispatch(addNewProduct(orderProduct)),
+    pushToFarm: (farmProduct) => dispatch(pushToFarm(farmProduct))
   }
 }
 
