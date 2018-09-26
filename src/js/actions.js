@@ -11,3 +11,10 @@ export const pushToFarm = (farmProduct) => {
     payload : farmProduct
   }
 }
+
+export const pushToBudget = (budget) => {
+  return {
+    type: 'PUSH_CLIENT',
+    payload : budget
+  }
+}

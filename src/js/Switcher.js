@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import '../styles/Switcher.css';
-import { addNewProduct, pushToFarm } from './actions.js'
-import { initialStateFarm } from './reducers.js'
-// import Home from './Home'
-let totalPrice = 0;
+import { addNewProduct, pushToFarm, pushToBudget } from './actions.js'
+
 const productList = ['Хрен','Морковка','Лук','Помидорки']
 class Switcher extends Component{
 
@@ -20,13 +18,17 @@ class Switcher extends Component{
   };
   
   handleAddFarm = () => {
-    this.props.pushToFarm( initialStateFarm)
+    this.props.pushToFarm(this.props.shopOrder[0])
   }
+  
   render(){
     const {
       shopOrder, 
+      farmOrder,
+      budget
     } = this.props;
     const {handleAddProduct, handleAddFarm} = this;
+
     const orderProduct = shopOrder.map((item, index) =>{
       return (
         <div className='orderBlock' key={index} >
@@ -38,20 +40,28 @@ class Switcher extends Component{
         </div>
       )
     }) 
-    // const productData = information.map((item, index) => <li  key={index}>{item.date}</li>)
-    // const productPrice = information.map((item, index) => <li key={index}>Цена: {item.productPrice}</li>)
+
+    const farmProduct = farmOrder.map((item, index) =>{
+      return (
+        <div className='orderBlock' key={index} >
+          <div className='productNameAndPrice'>
+            <li>Название: {item.productName}</li>
+            <li>Цена: {item.productPrice} </li>
+          </div>
+          <li>Создан: {item.date}</li>
+        </div>
+      )
+    }) 
     
    // totalPrice+=productPrice;
-    
-    console.log('product', totalPrice);
-    // const { information } = this.props;
+   
     return (
       <div className='Switcher'>
         <div className='newOrders commonProps'>
           <h2>Новые заказы в магазине</h2>
           <div>
             <button type='button' onClick={handleAddProduct}>Создать заказ</button>
-            <button type='button' onClick={handleAddFarm}>Отправить заказ на ферму</button>
+            <button type='button' disabled={shopOrder.length==0 ?  true : false} onClick={handleAddFarm}>Отправить заказ на ферму</button>
           </div>
           <ul> {orderProduct}</ul>
         </div>
@@ -59,16 +69,17 @@ class Switcher extends Component{
         <p> Дата: {date} </p> */}
         <div className='productionOnFarm commonProps'>
           <h2>Производство на ферме</h2>
-          <button type='button' >Отправить урожай клиенту</button>
+          <button type='button' disabled={farmOrder.length==0 ?  true : false} onClick={this.props.pushToBudget}>Отправить урожай клиенту</button>
+          <ul>{ farmProduct }</ul>
         </div>
         <div className='budget commonProps'>
           <h2>Бюджет</h2>
           <div className='orderList'>
-            <p>Всего получено денег: {}</p>
-            <p>Расходы продавцов:</p>
-            <p>Расходы на ферме:</p>
-            <p>Расходы на доставку:</p>
-            <p>Итого:</p>
+            <p>Всего получено денег: {budget.totalIncomes}</p>
+            <p>Расходы продавцов: {budget.sellersCosts}</p>
+            <p>Расходы на ферме: {budget.farmCosts}</p>
+            <p>Расходы на доставку: {budget.deliveryCosts}</p>
+            <p>Итого: {budget.result}</p>
           </div>
         </div>
       </div>
@@ -78,14 +89,17 @@ class Switcher extends Component{
 
 const mapStateToProps = state => {
   return {
-    shopOrder : state.shopOrder,
+    shopOrder : state.orderReducer.shopOrder,
+    farmOrder : state.farmReducer.farmOrder,
+    budget : state.budgetReducer.budget
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
     addNewProduct: (orderProduct) => dispatch(addNewProduct(orderProduct)),
-    pushToFarm: (farmProduct) => dispatch(pushToFarm(farmProduct))
+    pushToFarm: (farmProduct) => dispatch(pushToFarm(farmProduct)),
+    pushToBudget: (budget) => dispatch(pushToBudget(budget))
   }
 }
 
