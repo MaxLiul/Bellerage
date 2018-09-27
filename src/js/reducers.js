@@ -48,24 +48,37 @@ const farmReducer = (state = initialStateFarm, action) => {
 }
 
 const budgetReducer = (state = initialStateBudjet, action) => {
+  const {
+    budget : {
+      totalIncomes,
+      sellersCosts,
+      farmCosts,
+      deliveryCosts,
+      result     
+    }
+  } = state;
   switch(action.type){
     case 'ADD_PRODUCT':
-      return {
-        ...state, 
-        budget: {
-          ...state.budget, 
-          totalIncomes: state.budget.totalIncomes + action.payload.productPrice,
-          sellersCosts: state.budget.sellersCosts - 20,
-          
-        }
-      };  
+    
+    return {
+        
+      ...state, 
+      budget: {
+        ...state.budget, 
+        totalIncomes: totalIncomes + action.payload.productPrice,
+        sellersCosts: sellersCosts - 20,
+        result: result + action.payload.productPrice -20         
+      }
+    };  
 
     case 'PUSH_FARM':
+    
     return {
       ...state, 
       budget: {
         ...state.budget, 
-        farmCosts: state.budget.farmCosts -100
+        farmCosts: farmCosts -100,
+        result: result -100
       }
     };  
     case 'PUSH_CLIENT':
@@ -73,7 +86,8 @@ const budgetReducer = (state = initialStateBudjet, action) => {
         ...state, 
         budget: {
           ...state.budget, 
-          deliveryCosts: state.budget.deliveryCosts -20
+          deliveryCosts: deliveryCosts -20,
+          result: result - 20 
         }
       }
     default:

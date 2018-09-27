@@ -79,6 +79,7 @@ class Switcher extends Component{
             <p>Расходы продавцов: {budget.sellersCosts}</p>
             <p>Расходы на ферме: {budget.farmCosts}</p>
             <p>Расходы на доставку: {budget.deliveryCosts}</p>
+            {/* <p>Итого: {budget.totalIncomes+budget.sellersCosts+budget.farmCosts+budget.deliveryCosts}</p> */}
             <p>Итого: {budget.result}</p>
           </div>
         </div>
