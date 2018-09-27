@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import './index.css';
@@ -11,9 +10,7 @@ let store=createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window
 
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Switcher />
-    </BrowserRouter>
+    <Switcher />    
   </Provider>, 
   document.getElementById('root'));
 

@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 import '../styles/Switcher.css';
 import { addNewProduct, pushToFarm, pushToBudget } from './actions.js'
 
-const productList = ['Хрен','Морковка','Лук','Помидорки']
+const productList = ['Хрен','Морковка','Лук','Помидорки'];
+
 class Switcher extends Component{
 
   handleAddProduct = () => {
-    const randomIndex = Math.floor(Math.random() * productList.length)
+    const randomIndex = Math.floor(Math.random() * productList.length);
     const order = {
       productName: productList[randomIndex],
       date: new Date().toUTCString(),

@@ -48,6 +48,7 @@ const farmReducer = (state = initialStateFarm, action) => {
 }
 
 const budgetReducer = (state = initialStateBudjet, action) => {
+  
   const {
     budget : {
       totalIncomes,
@@ -57,11 +58,12 @@ const budgetReducer = (state = initialStateBudjet, action) => {
       result     
     }
   } = state;
+
   switch(action.type){
     case 'ADD_PRODUCT':
     
     return {
-        
+    
       ...state, 
       budget: {
         ...state.budget, 
